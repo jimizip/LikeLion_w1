@@ -9,6 +9,26 @@
     <title>Koo</title>
     <link rel="stylesheet" href="intro.css">
 </head>
+<script>
+    function dartMode() {
+    var body = document.getElementById("body");
+    var darkClass = body.className;
+    body.className = (darkClass == "dark") ? "light" : "dark";
+    }
+
+    function colorStr() {
+        document.getElementsByClassName("about-text")[1].style.color = "red";
+    } 
+
+    function smsBox() {
+        alert("저는 고구마 케이크를 좋아합니다♡")
+    }
+
+    function deleteClass() {
+        const div = document.getElementsByClassName('intro-box')[0];
+        div.remove();
+    } 
+</script>
 <body>
     <script>alert("본 웹페이지는 구지민의 자기소개 페이지 입니다.");</script>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
@@ -31,6 +51,12 @@
             </ul>
         </div>
     </nav>
+    <body id="body" class="dark">
+        <button type="button" onclick="dartMode()">🌛</button>
+    </body>
+    <button onclick="colorStr()">!</button>
+    <button onclick="smsBox()">?</button>
+    <button onclick="deleteClass()">X</button>
     <div class="mainbox">
         <div class="intro-box">
             <h1>Ku jimin</h1>
